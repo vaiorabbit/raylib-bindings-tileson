@@ -14,7 +14,6 @@ when /mswin|msys|mingw|cygwin/
 when /darwin/
   arch = RUBY_PLATFORM.split('-')[0]
   Raylib.load_lib(raylib_shared_lib_path + "libraylib.#{arch}.dylib")
-  p 'ok'
 when /linux/
   arch = RUBY_PLATFORM.split('-')[0]
   Raylib.load_lib(raylib_shared_lib_path + "libraylib.#{arch}.so")

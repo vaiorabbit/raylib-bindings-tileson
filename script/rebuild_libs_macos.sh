@@ -1,8 +1,6 @@
 pushd .
 cd ..
 git submodule update --init --recursive --depth=1
-cd raylib-bindings/raylib_dll
-./build_raylib_macos.sh
 popd
 
 pushd .

@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
+include(CMakePrintHelpers)
 project(tileson
     LANGUAGES C CXX
 )
@@ -19,18 +20,18 @@ set_target_properties(tileson PROPERTIES PREFIX "")
 target_include_directories(tileson PUBLIC ${RAYLIB_DLL_PATH}/raylib/src )
 target_include_directories(tileson PUBLIC ${CMAKE_CURRENT_LIST_DIR}/tileson/include )
 
-if (APPLE)
-    target_link_directories(tileson PUBLIC ${RAYLIB_DLL_PATH}/build_${BUILD_PLATFORM}/raylib)
-else()
-    target_link_directories(tileson PUBLIC ${RAYLIB_DLL_PATH}/build/raylib)
-endif()
+target_link_directories(tileson PUBLIC ${RAYLIB_DLL_PATH}/../lib)
 
 # For " Policy CMP0042 is not set: MACOSX_RPATH is enabled by default."
 if (APPLE)
     set(CMAKE_MACOSX_RPATH ON)
 endif (APPLE)
 
-target_link_libraries(tileson raylib)
+if (APPLE)
+    target_link_libraries(tileson raylib.${CMAKE_OSX_ARCHITECTURES})
+else()
+    target_link_libraries(tileson raylib)
+endif()
 
 if (APPLE)
     set_target_properties(tileson PROPERTIES
