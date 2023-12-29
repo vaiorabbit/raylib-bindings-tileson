@@ -1,15 +1,14 @@
 require_relative 'util/setup_dll'
-require_relative 'util/resource_path'
 
 if __FILE__ == $PROGRAM_NAME
-  screen_width = 800
-  screen_height = 450
+  screen_width = 500
+  screen_height = 290
   position = Vector2.create
 
-  InitWindow(screen_width, screen_height, "Yet Another Ruby-raylib bindings")
+  InitWindow(screen_width, screen_height, "Ruby raylib-tileson bindings")
   SetTargetFPS(60)
 
-  map = LoadTiled("#{RAYLIB_TILESON_RESOURCE_PATH}resources/desert.json")
+  map = LoadTiled("map/sampleMap.tmj")
 
   until WindowShouldClose()
     BeginDrawing()
