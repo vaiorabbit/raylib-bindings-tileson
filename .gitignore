@@ -1,0 +1,5 @@
+archive/
+tileson_dll/build
+tileson_dll/build_x86_64
+tileson_dll/build_arm64
+tileson_dll/build_aarch64
