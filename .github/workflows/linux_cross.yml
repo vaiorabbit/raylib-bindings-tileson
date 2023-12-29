@@ -51,14 +51,16 @@ jobs:
         fetch-depth: 1
         submodules: recursive
 
-    # - name: Check before
-    #   continue-on-error: true
-    #   run: |
-    #     # ls -l lib/*
-    #     ls -l /lib/aarch64-linux-gnu/*
-    #     # ls -l /usr/include/*
-    #     ls -l /usr/aarch64-linux-gnu/include/*
-    #     ls -l /usr/include/aarch64-linux-gnu/*
+    - name: Check before
+      continue-on-error: true
+      run: |
+        # ls -l lib/*
+        ls -l /lib/aarch64-linux-gnu/*
+        # ls -l /usr/include/*
+        ls -l /usr/aarch64-linux-gnu/include/*
+        ls -l /usr/include/aarch64-linux-gnu/*
+        which g++
+        which aarch64-linux-gnu-g++
 
     - name: Run rebuild script
       run: |
