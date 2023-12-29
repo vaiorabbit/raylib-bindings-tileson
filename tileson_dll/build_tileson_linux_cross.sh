@@ -7,10 +7,11 @@ cd ..
 
 export RAYLIB_DLL_PATH=../raylib-bindings/raylib_dll
 
-arch=`uname -a`
+export ARCH=aarch64
 
-mkdir -p build_$(arch)
-cd build_$(arch)
-cmake -D CMAKE_C_FLAGS="" -D CMAKE_BUILD_TYPE=Release -D BUILD_SHARED_LIBS=ON -D CMAKE_C_COMPILER=clang -D RAYLIB_DLL_PATH=$RAYLIB_DLL_PATH ../
+mkdir -p build_${ARCH}
+cd build_${ARCH}
+cmake -D CMAKE_C_FLAGS=-isystem\ /usr/aarch64-linux-gnu/include -D CMAKE_BUILD_TYPE=Release -D CMAKE_C_COMPILER_TARGET=aarch64-linux-gnu -D CMAKE_SYSTEM_PROCESSOR=ARM -D BUILD_SHARED_LIBS=ON -D CROSS_BUILD_PLATFORM=${ARCH} -D CMAKE_CXX_COMPILER=aarch64-linux-gnu-g++ -D RAYLIB_DLL_PATH=$RAYLIB_DLL_PATH ../
 make
-cp tileson.so ../../lib/tileson.$(arch).so
+
+cp tileson.so ../../lib/tileson.${ARCH}.so
