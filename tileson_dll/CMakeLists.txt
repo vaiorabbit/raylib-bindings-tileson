@@ -29,6 +29,8 @@ endif (APPLE)
 
 if (APPLE)
     target_link_libraries(tileson raylib.${CMAKE_OSX_ARCHITECTURES})
+elseif(UNIX)
+    target_link_libraries(tileson raylib.${CMAKE_HOST_SYSTEM_PROCESSOR})
 else()
     target_link_libraries(tileson raylib)
 endif()
