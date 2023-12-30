@@ -1,6 +1,9 @@
-# Yet another raylib wrapper for Ruby
+# raylib-tileson wrapper for Ruby
 #
 # * https://github.com/vaiorabbit/raylib-bindings-tileson
+#
+# Licensed under the BSD 2-Clause License.
+# * https://github.com/vaiorabbit/raylib-bindings-tileson/blob/main/LICENSE.txt
 
 require 'ffi'
 require 'raylib'
