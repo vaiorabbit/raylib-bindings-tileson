@@ -1,6 +1,6 @@
 BSD 2-Clause License
 
-Copyright (c) 2023 vaiorabbit <http://twitter.com/vaiorabbit>
+Copyright (c) 2023-2024 vaiorabbit <http://twitter.com/vaiorabbit>
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

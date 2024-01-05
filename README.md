@@ -3,7 +3,7 @@
 # raylib-tileson wrapper for Ruby #
 
 *   Created : 2023-12-23
-*   Last modified : 2023-12-30
+*   Last modified : 2024-01-05
 
 Provides Ruby bindings for raylib-tileson ( https://github.com/RobLoach/raylib-tileson )
 
@@ -49,7 +49,7 @@ All ruby codes here are available under the terms of the 2-clause BSD License:
 
     BSD 2-Clause License
 
-    Copyright (c) 2023 vaiorabbit <http://twitter.com/vaiorabbit>
+    Copyright (c) 2023-2024 vaiorabbit <http://twitter.com/vaiorabbit>
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without
