@@ -1,8 +1,8 @@
 require_relative 'util/setup_dll'
 
 if __FILE__ == $PROGRAM_NAME
-  screen_width = 500
-  screen_height = 290
+  screen_width = 480
+  screen_height = 272
   position = Vector2.create
 
   InitWindow(screen_width, screen_height, "Ruby raylib-tileson bindings")

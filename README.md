@@ -3,7 +3,9 @@
 # raylib-tileson wrapper for Ruby #
 
 *   Created : 2023-12-23
-*   Last modified : 2024-01-05
+*   Last modified : 2024-01-07
+
+<img src="https://raw.githubusercontent.com/vaiorabbit/raylib-bindings-tileson/main/doc/screenshot_00.png" width="600">
 
 Provides Ruby bindings for raylib-tileson ( https://github.com/RobLoach/raylib-tileson )
 
