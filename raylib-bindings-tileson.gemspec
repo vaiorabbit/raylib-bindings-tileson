@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "raylib-bindings-tileson"
-  spec.version       = "0.6.1"
+  spec.version       = "0.7.0"
   spec.authors       = ["vaiorabbit"]
   spec.email         = ["vaiorabbit@gmail.com"]
   spec.summary       = %q{Ruby bindings for raylib-tileson}
@@ -18,7 +18,7 @@ Ruby bindings for raylib-tileson ( https://github.com/RobLoach/raylib-tileson )
   spec.required_ruby_version = '>= 3.0.0'
 
   spec.add_runtime_dependency 'ffi', '~> 1.16'
-  spec.add_runtime_dependency 'raylib-bindings', '~> 0.6.1'
+  spec.add_runtime_dependency 'raylib-bindings', '~> 0.7.0'
 
   spec.files = Dir.glob("lib/*.rb") +
                ["README.md", "LICENSE.txt", "ChangeLog"] +
