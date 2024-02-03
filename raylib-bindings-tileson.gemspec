@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{Ruby bindings for raylib-tileson}
   spec.homepage      = "https://github.com/vaiorabbit/raylib-bindings-tileson"
   spec.require_paths = ["lib"]
-  spec.license       = "BSD 2-Clause License"
+  spec.license       = "BSD-2-Clause"
   spec.description   = <<-DESC
 Ruby bindings for raylib-tileson ( https://github.com/RobLoach/raylib-tileson )
   DESC
