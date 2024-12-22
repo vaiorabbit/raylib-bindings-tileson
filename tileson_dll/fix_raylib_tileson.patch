@@ -1,35 +1,13 @@
-diff --git a/include/raylib-tileson.h b/include/raylib-tileson.h
-index 103293a..cc21f19 100644
---- a/include/raylib-tileson.h
-+++ b/include/raylib-tileson.h
-@@ -5,7 +5,7 @@
- extern "C" {
- #endif
- 
--#include "raylib.h"
-+#include <raylib.h>
- 
- /**
-  * The Map data.
-diff --git a/src/raylib-tileson.cpp b/src/raylib-tileson.cpp
-index edde3c8..b5d3278 100644
 --- a/src/raylib-tileson.cpp
 +++ b/src/raylib-tileson.cpp
-@@ -2,7 +2,7 @@
+@@ -1,8 +1,9 @@
+ #include <string>
  #include <vector>
  #include <map>
++#include <algorithm>
  
 -#include "raylib.h"
 +#include <raylib.h>
  #include "raylib-tileson.h"
  #include "tileson.hpp"
  
-@@ -109,7 +109,7 @@ Map LoadTiledFromMemory(const unsigned char *fileData, int dataSize, const char*
- }
- 
- Map LoadTiled(const char* fileName) {
--    unsigned int bytesRead;
-+    int bytesRead;
-     unsigned char* data = LoadFileData(fileName, &bytesRead);
-     if (data == NULL || bytesRead == 0) {
-         struct Map output;

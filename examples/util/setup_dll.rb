@@ -21,8 +21,8 @@ else
   raise RuntimeError, "setup_dll.rb : Unknown OS: #{RUBY_PLATFORM}"
 end
 
-require 'tileson'
 if raylib_tileson_bindings_gem_available?
+  require 'tileson'
   # puts("Loading from Gem system path.")
   tileson_shared_lib_path = Gem::Specification.find_by_name('raylib-bindings-tileson').full_gem_path + '/lib/'
 
@@ -39,8 +39,8 @@ if raylib_tileson_bindings_gem_available?
     raise RuntimeError, "setup_dll.rb : Unknown OS: #{RUBY_PLATFORM}"
   end
 else
-  # puts("Loaging from local path.")
   require '../lib/tileson'
+  # puts("Loaging from local path.")
 
   case RUBY_PLATFORM
   when /mswin|msys|mingw|cygwin/

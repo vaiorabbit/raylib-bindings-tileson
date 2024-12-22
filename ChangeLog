@@ -1,3 +1,8 @@
+2024-12-22  vaiorabbit  <http://twitter.com/vaiorabbit>
+
+	* Use raylib-bindings v0.7.9
+	* Updated raylib-tileson ( https://github.com/RobLoach/raylib-tileson/commit/0d8ff468385f7bab64c1bdb9e45ffc501f11c799 )
+
 2024-04-07  vaiorabbit  <http://twitter.com/vaiorabbit>
 
 	* Use raylib-bindings v0.7.2
